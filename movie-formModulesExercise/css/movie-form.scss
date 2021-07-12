@@ -1,0 +1,73 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+.mainTitle {
+    text-align: center;
+}
+
+.page {
+    width: 960px;
+    margin: auto;
+    padding: 9px;
+    border: 1px solid black;
+}
+
+/* Create movie */
+
+fieldset {
+    border: 1px solid black;
+    padding: 10px;
+    margin: 0px auto;
+    width: 938px;
+}
+
+h3 {
+    margin: 10px 2px;
+}
+
+input {
+    margin: 5px 0px 10px 0px;
+    width: 930px;
+    font-size: 16px;
+}
+
+select {
+    margin: 5px 0px 10px 0px;
+    width: 938px;
+    height: 25px;
+    font-size: 16px;
+}
+
+button {
+    width: 938px;
+    height: 30px;
+    margin-top: 20px;
+    border: 0px;
+    background-color: rgb(76, 175, 79);
+    color: white;
+    font-weight: bold;
+}
+
+#filmsList {
+
+    padding-left: 15px;
+
+    li {
+        margin: 5px;
+    }
+}
+
+#programsUl {
+
+    padding-left: 15px;
+
+    li {
+        margin: 5px;
+    }
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie-form</title>
+    <link rel="stylesheet" href="./css/movie-form.css">
+</head>
+<body>
+
+    <h1 class="mainTitle">Movie festival</h1>
+
+    <section class="page">
+
+        <h3>Movie</h3>
+
+        <!-- Create movie -->
+
+        <form action="" method="post" id="createMovieForm">
+
+            <fieldset>
+
+                <label for="title">Title</label> <br>
+
+                <input type="text" name="movieTitle" id="title" placeholder="Title" autocomplete="off"><br>
+
+                <label for="length">Length(min)</label><br>
+
+                <input type="number" name="movieLength" id="length" placeholder="Length in min" autocomplete="off"><br>
+
+                <label for="genre">Genre</label><br>
+
+                <select name="movieGenre" id="genre">
+
+                    <option value="-">-</option>
+
+                </select>
+
+                <br>
+
+                <button id="createMovieButton">Create movie</button>
+
+                <ul id="filmsList"></ul>
+
+            </fieldset>
+
+
+        </form>
+
+        <!-- Create Program -->
+
+        <h3>Program</h3>
+
+        <form action="" method="post" id="createProgramForm">
+
+            <fieldset>
+
+                <label for="date">Date</label><br>
+
+                <input type="date" name="programDate" id="date"><br>
+
+                <button id="createProgramButton">Create program</button>
+
+                <ul id="programsUl"></ul><hr>
+
+                <label for="movie">Movie</label><br>
+
+                <select name="programMovie" id="movie">
+
+                    <option value="-">-</option>
+
+                </select>
+
+                <br>
+
+                <label for="program">Program</label><br>
+
+                <select name="programName" id="program">
+
+                    <option value="-">-</option>
+
+                </select>
+                
+                <br>
+
+                <button id="addMovieButton">Add movie to program</button>
+
+            </fieldset>
+
+        </form>
+
+    </section>
+
+
+
+    
+    <script type="module" src="./js/movie-form-controlers.js"></script>
+    
+</body>
+</html>
