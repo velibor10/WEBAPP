@@ -1,0 +1,13 @@
+header {
+    margin: 0px;
+    padding: 15px;
+    background-color: rgb(236, 111, 117);
+}
+
+.firstPar {
+    font-size: 25px;
+    color: rgb(255, 255, 255);
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+}

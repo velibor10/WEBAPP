@@ -1,0 +1,14 @@
+footer {
+    margin: 0px;
+    padding: 15px;
+    background-color: rgb(236, 111, 117);
+    margin-top: 25px;
+}
+
+.paragraphThree {
+    font-size: 25px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+}
