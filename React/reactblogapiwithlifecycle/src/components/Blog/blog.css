@@ -1,0 +1,15 @@
+.blog{
+    width: 100%;
+    margin: 0px;
+    padding: 10px;
+    background-color: silver;
+    border: 1px solid white;
+}
+.blog h1{
+    color: white;
+    margin: 5px;
+}
+.blog p {
+    color: white;
+    margin: 5px;
+}

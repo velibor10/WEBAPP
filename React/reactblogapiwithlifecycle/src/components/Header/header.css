@@ -1,0 +1,12 @@
+header{
+    width: 100%;
+    margin: 0px;
+    padding: 10px;
+    background-color: salmon;
+}
+header p {
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    text-align: center;
+    margin: 0px;
+}
