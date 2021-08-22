@@ -1,0 +1,124 @@
+.cardBorder {
+    margin-bottom: 10px;
+}
+
+.card {
+    margin: 0px auto;
+}
+
+.userCardImage {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding: 15px;
+}
+
+.userCardImage p {
+    font: 20px;
+    color: rgb(255, 255, 255);
+    margin: 0px;
+}
+
+.userData {
+    padding: 5px;
+    margin: 0px;
+}
+
+.userData p {
+    margin: 10px;
+    font-size: 14px;
+
+}
+
+.userData .iconMargin {
+    margin-right: 15px;
+}
+
+@media screen and (min-width:1400px) and (max-width:6000px) {
+    .cardBorder {
+        width: 20%;
+    }
+    
+    .card {
+        width: 90%;
+    }
+    
+    .userCardImage {
+        height: 250px;
+    }
+    
+}
+
+@media screen and (min-width:1200px) and (max-width:1400px) {
+    .cardBorder {
+        width: 20%;
+    }
+    
+    .card {
+        width: 95%;
+    }
+    
+    .userCardImage {
+        height: 250px;
+    }
+}
+
+@media screen and (min-width:992px) and (max-width:1200px) {
+    .cardBorder {
+        width: 25%;
+    }
+    
+    .card {
+        width: 95%;
+    }
+    
+    .userCardImage {
+        height: 250px;
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:992px) {
+    .cardBorder {
+        width: 33%;
+    }
+    
+    .card {
+        width: 95%;
+    }
+    
+    .userCardImage {
+        height: 250px;
+    }
+}
+
+@media screen and (min-width:554px) and (max-width:768px) {
+    .cardBorder {
+        width: 50%;
+    }
+    
+    .card {
+        width: 85%;
+    }
+    
+    .userCardImage {
+        height: 250px;
+    }
+}
+
+@media screen and (min-width:0px) and (max-width:554px) {
+    .cardBorder {
+        width: 100%;
+    }
+    
+    .card {
+        width: 230px;
+    }
+    
+    .userCardImage {
+        height: 250px;
+    }
+}
+
