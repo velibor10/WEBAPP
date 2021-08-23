@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { refreshIcon, userListIcon } from "../../Data/data";
-import { changeIcon, sendUserCardState, sendUserListState } from "../../Services/headerComponentFunctions";
+import { changeIcon, refreshUsers, sendUserCardState, sendUserListState } from "../../Services/headerComponentFunctions";
 import "./header.css";
 
 // Function for creating HTML elements for rendering
 
-export const Header = ({userListVisibility, stateOfUserList, userCardVisibility, stateOfUserCards}) => {
+export const Header = ({userListVisibility, stateOfUserList, userCardVisibility, stateOfUserCards, refreshState, setRefreshState}) => {
     
     const [viewIcon, setViewIcon] = useState(userListIcon);
     
@@ -20,12 +20,20 @@ export const Header = ({userListVisibility, stateOfUserList, userCardVisibility,
         sendUserCardState(stateOfUserCards, userCardVisibility);
     }
 
+    // Function for refresh data after click
+
+    const clickOnRefreshIcon = () => {
+        refreshUsers(refreshState, setRefreshState);
+    }
+
+    //Render
+
     return (
         <header className="container-flow">
             <div className="container headerContainer">
                 <div className="row headerRow">
                     <p className="logo">Bit Persons</p>
-                    <div className="icon">{refreshIcon}</div>
+                    <div className="icon" onClick={clickOnRefreshIcon}>{refreshIcon}</div>
                     <div className="icon" onClick={clickOnViewIcon}>{viewIcon}</div>
                 </div>
             </div>

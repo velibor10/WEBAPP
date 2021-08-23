@@ -8,23 +8,33 @@ function App() {
 
   // STATE
 
-  // Function for following state of userList elements
+  // State for following state of userList elements
 
   const [userListVisibility, setVisibilityOfUserList] = useState("block");
 
-  // Function for following state of userCard elements
+  // State for following state of userCard elements
 
   const [ userCardVisibility, setVisibilityOfUserCards ] = useState("hide")
 
-  // UserList prop function 
+  // State of userData
+
+  const [isRefresh, setRefreshState] = useState(true);
+  
 
   //FUNCTIONS
 
-  const userListProps = userListVisibility => setVisibilityOfUserList(userListVisibility)
+  // UserList prop function 
+
+  const userListProps = userListVisibility => setVisibilityOfUserList(userListVisibility);
 
    // UserList prop function 
 
-  const userCardProps = userCardVisibility => setVisibilityOfUserCards(userCardVisibility)
+  const userCardProps = userCardVisibility => setVisibilityOfUserCards(userCardVisibility);
+
+  // User data prop function
+
+  const refreshProps = isRefresh => setRefreshState(isRefresh);
+
 
   // RENDER
 
@@ -34,10 +44,13 @@ function App() {
       stateOfUserList ={userListVisibility}
       userCardVisibility = {userCardProps}
       stateOfUserCard = {userCardVisibility}
+      refreshState = {isRefresh}
+      setRefreshState = {refreshProps}
       />
       <MainSection 
       visibilityOfUserList = {userListVisibility}
       visibilityOfUserCards = {userCardVisibility}
+      refreshStatus={isRefresh}
        />
       <Footer />
     </div>

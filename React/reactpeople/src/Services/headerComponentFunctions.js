@@ -31,3 +31,14 @@ export const changeIcon = (state, func) => {
         func(userListIcon);
     }
 }
+
+// Function for detect click on refresh icon
+
+export const refreshUsers = (state, func) => {
+    if(state === true) {
+        func(false);
+    }
+    else {
+        func(true);
+    }
+}
