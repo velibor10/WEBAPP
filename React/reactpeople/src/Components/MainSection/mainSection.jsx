@@ -7,7 +7,7 @@ import "./mainSection.css";
 
 // Function for creating HTML elements for rendering
 
-export const MainSection = ({visibilityOfUserList, visibilityOfUserCard}) => {
+export const MainSection = ({ visibilityOfUserList, visibilityOfUserCard, refreshStatus }) => {
 
     // STATE
 
@@ -16,10 +16,12 @@ export const MainSection = ({visibilityOfUserList, visibilityOfUserCard}) => {
     // LIFECYCLE
 
     useEffect(() => {
+
         createRandomUsers().then(users => {
             setUserData(users);
-        })
-    }, [])
+        })  
+
+    }, [refreshStatus])
 
     // RENDER
 
@@ -28,25 +30,25 @@ export const MainSection = ({visibilityOfUserList, visibilityOfUserCard}) => {
         <section className="container-flow mainSection">
             <div className="container mainSectionContainer">
                 <div className="row mainSectionRow">
-                    { 
-                    <div className={`userList ${visibilityOfUserList}`}>
+                    {
+                        <div className={`userList ${visibilityOfUserList}`}>
+                            {
+                                userData.map((user, index) => {
+                                    return (
+                                        <UserList name={user.getFullName()} email={user.hideEmail()} birthdate={user.showFormatedDate()} image={user.image} key={index} />
+                                    )
+                                })
+                            }
+                        </div>}
+
+                    <div className={`userCards ${visibilityOfUserCard}`}>
                         {
                             userData.map((user, index) => {
                                 return (
-                                    <UserList name={user.getFullName()} email={user.hideEmail()} birthdate={user.showFormatedDate()} image={user.image} key={index} />
-                                )
+                                    <UserCard name={user.name} email={user.hideEmail()} birthdate={user.showFormatedDate()} image={user.image} key={index} />
+                                );
                             })
                         }
-                    </div> }
-
-                    <div className={`userCards ${visibilityOfUserCard}`}>
-                    {
-                        userData.map((user, index) => {
-                            return (
-                                <UserCard name={user.name} email={user.hideEmail()} birthdate={user.showFormatedDate()} image={user.image} key={index}/>
-                            );
-                        })
-                    }
                     </div>
                 </div>
             </div>
