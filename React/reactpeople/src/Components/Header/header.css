@@ -8,4 +8,93 @@ header p {
     color: rgb(255, 255, 255);
     margin: 0px;
     text-align: center;
+    width: 50%;
 }
+
+.logo {
+    font-size: 25px;
+    color: rgb(255, 255, 255);
+    margin: 0px;
+    text-align: center;
+}
+
+
+.headerRow {
+    justify-content: flex-end;
+}
+.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.headerIcon {
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+}
+
+/*Media screen*/
+@media screen and (min-width: 1400px) and (max-width: 6000px) {
+    header .logo {
+      width: 1120px;
+      padding-left: 100px;
+    }
+    header .icon {
+      width: 50px;
+    }
+  }
+  
+  @media screen and (min-width: 1200px) and (max-width: 1400px) {
+    header .logo {
+      width: 940px;
+      padding-left: 100px;
+    }
+    header .icon {
+      width: 50px;
+    }
+  }
+  
+  @media screen and (min-width: 992px) and (max-width: 1200px) {
+    header .logo {
+      width: 760px;
+      padding-left: 100px;
+    }
+    header .icon {
+      width: 50px;
+    }
+  }
+  
+  @media screen and (min-width: 768px) and (max-width: 992px) {
+    header .logo {
+      width: 520px;
+      padding-left: 100px;
+    }
+    header .icon {
+      width: 50px;
+    }
+  }
+  
+  @media screen and (min-width: 576px) and (max-width: 768px) {
+    header .logo {
+      width: 440px;
+      padding-left: 100px;
+    }
+    header .icon {
+      width: 50px;
+    }
+  }
+  
+  @media screen and (min-width: 0px) and (max-width: 576px) {
+    header .headerRow {
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+    }
+    header .logo {
+      width: 250px;
+    }
+    header .icon {
+      width: 50px;
+    }
+  }
+  /*# sourceMappingURL=header.css.map */

@@ -1,4 +1,25 @@
 .mainSection {
     min-height: 100vh;
-    margin: 10px 0px;
+    margin: 10px 0px 0px 0px;
+}
+
+.userList {
+    padding: 0px;
+    margin: 0px;
+}
+
+.userCards {
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
 }

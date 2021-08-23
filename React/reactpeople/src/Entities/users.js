@@ -2,13 +2,16 @@ import { createFormattedDate, createShorterEmail } from "../Services/publicFunct
 
 export class User {
 
-    constructor(id, name, email, dateOfBirth, image){
+    constructor(gender, name, surname, email, dateOfBirth, image){
         try {
             
-            if(!id){
+            if(!gender){
                 throw new Error("User id must be defined!");
             }
             if(!name){
+                throw new Error("User name must be defined!");
+            }
+            if(!surname){
                 throw new Error("User name must be defined!");
             }
             if(!email){
@@ -20,10 +23,13 @@ export class User {
             if(!image){
                 throw new Error("User image must be defined!");
             }
-            if(typeof id !== "string"){
+            if(typeof gender !== "string"){
                 throw new Error("Input for user id must be string!");
             }
             if(typeof name !== "string"){
+                throw new Error("Input for user name must be string!");
+            }
+            if(typeof surname !== "string"){
                 throw new Error("Input for user name must be string!");
             }
             if(typeof email !== "string"){
@@ -36,8 +42,9 @@ export class User {
                 throw new Error("Input for user image must be string!");
             }
 
-            this.id = id;
+            this.gender = gender;
             this.name = name;
+            this.surname = surname;
             this.email = email;
             this.dateOfBirth = new Date(dateOfBirth);
             this.image = image;
@@ -49,10 +56,14 @@ export class User {
 
     hideEmail() {
         let emailArray = this.email.split("@");
-        createShorterEmail(emailArray);
+        return createShorterEmail(emailArray);
     }
 
     showFormatedDate() {
-        createFormattedDate(this.dateOfBirth);
+        return createFormattedDate(this.dateOfBirth);
+    }
+
+    getFullName() {
+        return `${this.name} ${this.surname}`;
     }
 }
