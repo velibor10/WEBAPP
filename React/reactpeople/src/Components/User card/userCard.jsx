@@ -2,7 +2,7 @@ import React from 'react';
 import { birthdayCakeIcon, emailIcon } from '../../Data/data';
 import './userCard.css';
 
-export const UserCard = ({ name, email, birthdate, image }) => {
+export const UserCard = ({ name, email, birthdate, image, gender }) => {
 
     return (
         <div className="cardBorder">
@@ -11,7 +11,7 @@ export const UserCard = ({ name, email, birthdate, image }) => {
                     <p>{name}</p>
                 </div>
 
-                <div className="userData">
+                <div className={`userData ${gender}`}>
                 <p className="userEmail">{emailIcon}{email}</p>
                 <p className="userBirthday">{birthdayCakeIcon}{birthdate}</p>
                 </div>

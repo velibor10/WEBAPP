@@ -37,6 +37,10 @@
     margin-right: 15px;
 }
 
+.female {
+    background-color: #ffebee;
+}
+
 @media screen and (min-width:1400px) and (max-width:6000px) {
     .cardBorder {
         width: 20%;

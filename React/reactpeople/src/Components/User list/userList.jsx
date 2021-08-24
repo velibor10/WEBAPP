@@ -4,10 +4,10 @@ import './userList.css';
 
 
 /*Function for create HTML elements for rendering*/
-export const UserList = ({name, email, birthdate, image}) => {
+export const UserList = ({name, email, birthdate, image, gender}) => {
     
     return(
-        <div className="userListBox">
+        <div className={`userListBox ${gender}`}>
 
             <div className="userImage">
                 <img src={image} alt="img..." />
