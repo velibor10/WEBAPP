@@ -1,0 +1,33 @@
+.searchBox {
+    margin: 25px 0px;
+    display: flex;
+    align-items: center;
+}
+
+.searchIcon {
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-grow: 2;
+}
+
+.searchElement {
+    margin: 0px;
+    padding: 0px;
+    flex-grow: 98;
+}
+
+.searchInput {
+    width: 100%;
+    margin: 0px;
+    padding: 5px;
+    border: 0px;
+    border-bottom: 1px solid rgb(200, 200, 200);
+    font-size: 20px;
+    outline: none;
+}
+
+
+

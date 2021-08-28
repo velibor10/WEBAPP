@@ -10,11 +10,21 @@ function App() {
 
   // State for following state of userList elements
 
-  const [userListVisibility, setVisibilityOfUserList] = useState("block");
+  let userListStorage= sessionStorage.getItem("userListVisibility");
+  if(!userListStorage) {
+    userListStorage = "block";
+  }
+
+  let userCard = "hide";
+  if(userListStorage === "hide") {
+    userCard = "block";
+  }
+
+  const [userListVisibility, setVisibilityOfUserList] = useState(userListStorage);
 
   // State for following state of userCard elements
 
-  const [ userCardVisibility, setVisibilityOfUserCards ] = useState("hide")
+  const [ userCardVisibility, setVisibilityOfUserCards ] = useState(userCard)
 
   // State of userData
 
@@ -38,6 +48,13 @@ function App() {
 
   // RENDER
 
+  // let userListStorage = sessionStorage.getItem("userListVisibility");
+
+  // if(userListStorage!= "undefined" && userListStorage != userListVisibility) {
+  //     setVisibilityOfUserList(userListStorage);
+  // }
+
+
   return (
     <div className="App">
       <Header userListVisibility = {userListProps} 
@@ -58,3 +75,4 @@ function App() {
 }
 
 export default App;
+
